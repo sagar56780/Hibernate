@@ -1,0 +1,5 @@
+package entityclasses;
+@Entity
+public class Subject {
+
+}

@@ -1,0 +1,5 @@
+package hibernate_many_to_one_uni;
+
+public class Review {
+
+}

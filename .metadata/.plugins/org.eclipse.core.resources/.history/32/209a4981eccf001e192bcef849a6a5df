@@ -1,0 +1,62 @@
+package hibernate_crud_student_app;
+
+import java.util.Scanner;
+
+import javax.persistence.Entity;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+
+
+public class StudentApp {
+	public static Scanner sc=new Scanner(System.in);
+	public static void main(String[] args) {
+		EntityManagerFactory emf=Persistence.createEntityManagerFactory("studentapp");
+		EntityManager em=emf.createEntityManager();
+		EntityTransaction et=em.getTransaction();
+		
+		while(true)
+		{ 
+			System.out.println("press 1 for add Student ");
+			System.out.println("press 2 for remove Student");
+			System.out.println("press 3 for find Student");
+			System.out.println("press 4 for update Student");
+			System.out.println("press 5 for failed Students");
+			int choice=sc.nextInt();
+			sc.nextLine();
+			switch(choice)
+			{
+			case 1:
+				System.out.println("enter Student name");
+				String name=sc.next();
+				System.out.println("enter Student percentage");
+				float per=sc.nextFloat();
+				System.out.println("enter Student id");
+				int id=sc.nextInt();
+				sc.nextLine();
+				System.out.println("enter Student age");
+				int age=sc.nextInt();
+				new Student(id,name,age,per);
+				break;
+			case 2:
+				break;
+			case 3:
+				break;
+			case 4:
+				break;
+			case 5:
+				break;
+			default:
+				break;
+			
+			}
+			
+		}
+		
+	}
+	   
+		
+	
+
+}

@@ -1,0 +1,14 @@
+package insert;
+
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+import org.jboss.jandex.Main;
+
+public class Insert {
+
+	public static void main(String[] args) {
+		EntityManagerFactory emf=Persistence.createEntityManagerFactory("one_to_one_uni");
+		
+	}
+}

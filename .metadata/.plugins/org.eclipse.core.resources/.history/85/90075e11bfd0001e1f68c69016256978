@@ -1,0 +1,25 @@
+package schoolAdmin;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+
+import school.Student;
+import school.StudentId;
+
+public class Admin {
+	public static void main(String[] args) {
+		EntityManagerFactory emf=Persistence.createEntityManagerFactory("school");
+		EntityManager em=emf.createEntityManager();
+		EntityTransaction et=em.getTransaction();
+		StudentId si=new  StudentId();
+		Student s=new Student(1,"ankit",15,21,null);
+		et.begin();
+			em.persist(s);
+		et.commit();
+		
+	}
+	
+
+}
