@@ -13,7 +13,6 @@ public class fetch {
 	EntityManager em=emf.createEntityManager();
 	EntityTransaction et=em.getTransaction();
 	Author a=em.find(Author.class, 1);
-	System.out.println(a);
 	
 	
 	}

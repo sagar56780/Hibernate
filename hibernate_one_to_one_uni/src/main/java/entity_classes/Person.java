@@ -4,6 +4,9 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
+import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.CascadeType;
+
 @Entity
 public class Person {
 	@Id
@@ -11,6 +14,7 @@ public class Person {
 	private String name;
 	private long phone;
 	@OneToOne
+	@Cascade(CascadeType.PERSIST.MERGE.REMOVE)
 	private  PanCard pan;
 	public int getId() {
 		return id;
